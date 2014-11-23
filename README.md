@@ -1,6 +1,6 @@
 CleaningData
 ============
-This README file contains instructions for running the code in the file run_analysis.R and a description of how the script workks.
+This README file contains instructions for running the code in the file run_analysis.R and a description of how the script works.
 
 ## Instructions for running the code and viewing the results.
 The file with the script is run_analysis.R.  This script is run by invoking the function runMainProgram().  In order to run properly, the data set UCI_HAR_Dataset must be in the working directory.  The output of the program is a text file titled TidyDataSet.txt.  This file can be better viewed by reading the file into R as follows:
