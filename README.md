@@ -19,3 +19,7 @@ Citation for above code: David's Project FAQ, https://class.coursera.org/getdata
   3. cbind X_test (2947x561) with subject_test (2947x1 )
   4. cbind the results with yTest (2947x1) to get a data table of 2947x563
   5. row bind results of 2 and 4 above to get a data table of 10299x563
+* The setColumnNames() function sets the right most column names of t3 to Subject and Activity.
+* The setActivityNames() function changes the Activity Name numbers to Activity Lables according to the mapping in activity_labels.txt input file.
+* The setUniqueColumnNames() function eliminates columns with duplicate names.
+* The getCorrectColumnsAndTidy() function Filter table to only select columns for means and std and eliminates parenthesis in the column names.  This function uses a regular expression to select the correct columns.  Only columns that end in mean(), mean()-X, mean()-Y, mean()-Z, std(), std()-X, std()-Y, and std()-Z were selected.  Including the activity and subject columns, this resulted in 68 columns.
