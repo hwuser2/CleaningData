@@ -4,7 +4,7 @@ Codebook for Getting and Cleaning Data Course Project
 ## Introduction
 This codebook provides:
 * A section titled “Study Design”, which describes how the data was collected and the features that were selected, as given in the feature_info.txt file provided with the course data set.
-* A section titled “Code Book” which describes the variables, as given in the feature_info.txt file.
+* A section titled “Code Book” which describes the original variables, as given in the feature_info.txt file, and the variables selected whose means were calculated.
 * A section titled “Transformations” which describes the transformations that were performed to the original variables to obtain the outputs.
 
 ## Study Design
@@ -69,8 +69,11 @@ The complete list of variables of each feature vector is available in 'features.
 
 
 ## Transformations
-
-The steps that were used to transform the original variable given features.txt to the variables used to generate the means are:
-*
-*
-*
+The below transformations were performed to obtain the variables (columns) which were used to calculate means.
+* Second instances of variables whose names were already found were deleted.  In other words, second or more occurrences of variables were deleted resulting in unique variable names and no repeated variables.
+* Parenthesis were removed from the variable names.
+* Only variables whose names ended in mean(), mean()-X, mean()-Y, mean()-Z, std(), std()-X, std()-Y, and std()-Z were selected.
+* Underscores were removed from the variable names.
+* Variable names were changed to lower case.
+* 
+* The variables that were chosen are:tbodyaccmeanx, tbodyaccmeany, tbodyaccmeanz, tbodyaccstdx, tbodyaccstdy, tbodyaccstdz, tgravityaccmeanx, tgravityaccmeany, tgravityaccmeanz, tgravityaccstdx, tgravityaccstdy, tgravityaccstdz, tbodyaccjerkmeanx, tbodyaccjerkmeany, tbodyaccjerkmeanz, tbodyaccjerkstdx, tbodyaccjerkstdy, tbodyaccjerkstdz, tbodygyromeanx, tbodygyromeany, tbodygyromeanz, tbodygyrostdx, tbodygyrostdy, tbodygyrostdz, tbodygyrojerkmeanx, tbodygyrojerkmeany, tbodygyrojerkmeanz, tbodygyrojerkstdx, tbodygyrojerkstdy, tbodygyrojerkstdz, tbodyaccmagmean, tbodyaccmagstd, tgravityaccmagmean, tgravityaccmagstd, tbodyaccjerkmagmean, tbodyaccjerkmagstd, tbodygyromagmean, tbodygyromagstd, tbodygyrojerkmagmean, tbodygyrojerkmagstd, fbodyaccmeanx, fbodyaccmeany, fbodyaccmeanz, fbodyaccstdx, fbodyaccstdy, fbodyaccstdz, fbodyaccjerkmeanx, fbodyaccjerkmeany, fbodyaccjerkmeanz, fbodyaccjerkstdx, fbodyaccjerkstdy, fbodyaccjerkstdz, fbodygyromeanx, fbodygyromeany, fbodygyromeanz, fbodygyrostdx, fbodygyrostdy, fbodygyrostdz, fbodyaccmagmean, fbodyaccmagstd, fbodybodyaccjerkmagmean, fbodybodyaccjerkmagstd, fbodybodygyromagmean, fbodybodygyromagstd, fbodybodygyrojerkmagmean, and fbodybodygyrojerkmagstd.
