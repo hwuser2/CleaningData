@@ -6,9 +6,9 @@ This README file contains instructions for running the code in the file run_anal
 
 ## Instructions for running the code and viewing the results.
 The file with the script is run_analysis.R.  This script is run by invoking the function runMainProgram().  In order to run properly, the data set UCI_HAR_Dataset must be in the working directory.  The output of the program is a text file titled TidyDataSet.txt.  This file can be better viewed by reading the file into R as follows:
-data <- read.table(file_path, header = TRUE)
-View(data)
-Citation for above code: David's Project FAQ, https://class.coursera.org/getdata-009/forum/thread?thread_id=58
+* data <- read.table(file_path, header = TRUE)
+* View(data)
+* Citation for above code: David's Project FAQ, https://class.coursera.org/getdata-009/forum/thread?thread_id=58
 
 ## Description of how the code works
 * The runMainProgram() function calls the other functions.  These functions are described in the order they are called below.
@@ -22,6 +22,6 @@ Citation for above code: David's Project FAQ, https://class.coursera.org/getdata
 * The setColumnNames() function sets the right most column names of t3 to Subject and Activity.
 * The setActivityNames() function changes the Activity Name numbers to Activity Lables according to the mapping in the activity_labels.txt input file.
 * The setUniqueColumnNames() function eliminates columns with duplicate names.
-* The getCorrectColumnsAndTidy() function filters the table to only select columns for means and standard deviations.  The function also eliminates parenthesis and underscores in the column names, and sets all the column names to lower case.  This function uses a regular expression to select the correct colums.  Only columns whose names ended in mean(), mean()-X, mean()-Y, mean()-Z, std(), std()-X, std()-Y, and std()-Z were selected.  Including the activity and subject columns, this resulted in 68 columns.  The dimension of t3 is (10299, 68).
-* The meanDataSet() function created a new data.frame named t4, which contains the mean of the t3 data set first ordered by subject, then by activity.  It does this in an efficient manner using the melt() and dcast() packages from the reshape2 library.  The dimension of t4 is (180, 68). t4 is the tidy set output required by the project.
+* The getCorrectColumnsAndTidy() function filters the table to only select columns (i.e. variables) for means and standard deviations.  The function also eliminates parenthesis and underscores in the column names, and sets all the column names to lower case.  This function uses a regular expression to select the correct colums.  Only columns whose names ended in mean(), mean()-X, mean()-Y, mean()-Z, std(), std()-X, std()-Y, and std()-Z were selected.  Including the activity and subject columns, this resulted in 68 columns.  The dimension of t3 is (10299, 68).
+* The meanDataSet() function created a new data.frame named t4, which contains the means of the variables of the t3 data set first ordered by subject, then by activity.  It does this in an efficient manner using the melt() and dcast() packages from the reshape2 library.  The dimension of t4 is (180, 68). t4 is the tidy set output required by the project.
 * Finally, t4 is output to a text file named TidyDataSet.txt using write.table().
