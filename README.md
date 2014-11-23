@@ -1,6 +1,6 @@
 CleaningData
 ============
-This repo contains the submissions for the course project for Getting and Cleaning Data.
+This repo contains the submissions for the course project for Getting and Cleaning Data given by Coursera.org.
 
 This README file contains instructions for running the code in the file run_analysis.R and a description of how the script workks.
 
