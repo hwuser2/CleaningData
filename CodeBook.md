@@ -1,8 +1,8 @@
-Codebook for Getting and Cleaning Data Course Project
+CodeBook for Getting and Cleaning Data Course Project
 =====================================================
 
 ## Introduction
-This codebook provides:
+This code book provides:
 * A section titled “Study Design”, which describes how the data was collected and the features that were selected, as given in the feature_info.txt file provided with the course data set.
 * A section titled “Code Book” which describes the original variables, as given in the feature_info.txt file, and the variables selected whose means were calculated.
 * A section titled “Transformations” which describes the transformations that were performed to the original variables to obtain the outputs.
