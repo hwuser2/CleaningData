@@ -69,7 +69,7 @@ The complete list of variables of each feature vector is available in 'features.
 
 
 ## Transformations
-The below transformations were performed to obtain the variables (columns) which were used to calculate means.
+The below transformations were performed to obtain the variables (columns) which were used to calculate means.  The final output is in wide format.
 * Second instances of variables whose names were already found were deleted.  In other words, second or more occurrences of variables were deleted resulting in unique variable names, and no repeated variables.
 * Parenthesis were removed from the variable names.
 * Only variables whose names ended in mean(), mean()-X, mean()-Y, mean()-Z, std(), std()-X, std()-Y, and std()-Z were selected.
